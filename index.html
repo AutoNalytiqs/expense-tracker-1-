@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <!-- =========================
+             TITLE
+        ========================== -->
+
+        <h1>My Expense Tracker</h1>
+
+
+        <!-- =========================
+             BUDGET SECTION
+        ========================== -->
+
+        <div class="budget-form">
+
+            <h2>Set Monthly Budget</h2>
+
+            <input
+                id="budgetInput"
+                type="number"
+                placeholder="Enter budget in KSh"
+            >
+
+            <button onclick="setBudget()">
+                Set Budget
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             FINANCIAL SUMMARY
+        ========================== -->
+
+        <div class="summary">
+
+            <h2>
+                Monthly Budget:
+                KSh <span id="budget">0</span>
+            </h2>
+
+
+            <h2>
+                Total Spent:
+                KSh <span id="totalSpent">0</span>
+            </h2>
+
+
+            <h2>
+                Remaining:
+                KSh <span id="remaining">0</span>
+            </h2>
+
+        </div>
+
+
+        <!-- =========================
+             BUDGET PROGRESS
+        ========================== -->
+
+        <div class="progress-section">
+
+            <h2>Budget Usage</h2>
+
+            <div class="progress-bar">
+
+                <div id="progressFill"></div>
+
+            </div>
+
+            <p>
+
+                <span id="progressText">
+                    0%
+                </span>
+
+                of your budget used
+
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             ADD EXPENSE
+        ========================== -->
+
+        <div class="form">
+
+            <h2>Add Expense</h2>
+
+
+            <input
+                id="expenseName"
+                type="text"
+                placeholder="What did you spend on?"
+            >
+
+
+            <input
+                id="expenseAmount"
+                type="number"
+                placeholder="Amount in KSh"
+            >
+
+
+            <!-- Expense Category -->
+
+            <select id="expenseCategory">
+
+                <option value="Food">
+                    Food
+                </option>
+
+                <option value="Transport">
+                    Transport
+                </option>
+
+                <option value="Rent">
+                    Rent
+                </option>
+
+                <option value="Bills">
+                    Bills
+                </option>
+
+                <option value="Shopping">
+                    Shopping
+                </option>
+
+                <option value="Entertainment">
+                    Entertainment
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <button onclick="addExpense()">
+                Add Expense
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             EXPENSE LIST
+        ========================== -->
+
+        <div class="expenses">
+
+            <h2>My Expenses</h2>
+
+            <ul id="expenseList"></ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
